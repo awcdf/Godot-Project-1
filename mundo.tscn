@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://de0braunitiv7"]
+
+[ext_resource type="PackedScene" uid="uid://cfb37rm5ppqac" path="res://jogador.tscn" id="1_lgngo"]
+[ext_resource type="PackedScene" uid="uid://cma6ep846flkf" path="res://chao.tscn" id="2_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://db64a18ypvyu7" path="res://obstaculo.tscn" id="3_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://blgf8kmni2auh" path="res://zona_morte.tscn" id="4_otwa2"]
+[ext_resource type="PackedScene" uid="uid://cwo3wqoeqx6ue" path="res://moeda.tscn" id="5_aou4a"]
+[ext_resource type="PackedScene" uid="uid://dpwcjhqad06du" path="res://hud.tscn" id="6_5ckkb"]
+
+[node name="Mundo" type="Node2D" unique_id=695195210]
+position = Vector2(-1, -5)
+
+[node name="Jogador" parent="." unique_id=638146725 groups=["player"] instance=ExtResource("1_lgngo")]
+position = Vector2(377, 69)
+
+[node name="Chao" parent="." unique_id=10278747 instance=ExtResource("2_fw4w5")]
+position = Vector2(577, 573)
+
+[node name="Obstaculo" parent="." unique_id=1022441173 instance=ExtResource("3_fw4w5")]
+position = Vector2(161, 549)
+
+[node name="Obstaculo2" parent="." unique_id=557394610 instance=ExtResource("3_fw4w5")]
+position = Vector2(353, 549)
+
+[node name="Obstaculo3" parent="." unique_id=1581134240 instance=ExtResource("3_fw4w5")]
+position = Vector2(545, 549)
+
+[node name="Obstaculo4" parent="." unique_id=1766693794 instance=ExtResource("3_fw4w5")]
+position = Vector2(737, 549)
+
+[node name="Obstaculo5" parent="." unique_id=1194127067 instance=ExtResource("3_fw4w5")]
+position = Vector2(801, 501)
+
+[node name="Obstaculo6" parent="." unique_id=127412356 instance=ExtResource("3_fw4w5")]
+position = Vector2(865, 453)
+
+[node name="Obstaculo7" parent="." unique_id=1587636493 instance=ExtResource("3_fw4w5")]
+position = Vector2(929, 405)
+
+[node name="Obstaculo8" parent="." unique_id=233398450 instance=ExtResource("3_fw4w5")]
+position = Vector2(993, 357)
+
+[node name="ZonaMorte" parent="." unique_id=2073958590 instance=ExtResource("4_otwa2")]
+position = Vector2(609, 653)
+
+[node name="Moeda" parent="." unique_id=715636323 instance=ExtResource("5_aou4a")]
+position = Vector2(257, 453)
+
+[node name="Moeda2" parent="." unique_id=1839752824 instance=ExtResource("5_aou4a")]
+position = Vector2(449, 453)
+
+[node name="Moeda3" parent="." unique_id=1527055777 instance=ExtResource("5_aou4a")]
+position = Vector2(641, 453)
+
+[node name="Moeda4" parent="." unique_id=1734903305 instance=ExtResource("5_aou4a")]
+position = Vector2(705, 317)
+
+[node name="Moeda5" parent="." unique_id=1393854012 instance=ExtResource("5_aou4a")]
+position = Vector2(1089, 253)
+
+[node name="Hud" parent="." unique_id=1249565899 instance=ExtResource("6_5ckkb")]

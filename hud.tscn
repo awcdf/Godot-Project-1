@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dpwcjhqad06du"]
+
+[ext_resource type="Script" uid="uid://geqyb32b6146" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_37p78"]
+font_size = 100
+font_color = Color(1, 0.38431373, 0.03529412, 1)
+
+[node name="Hud" type="CanvasLayer" unique_id=1249565899]
+script = ExtResource("1_37p78")
+
+[node name="CoinLabel" type="Label" parent="." unique_id=1843856426]
+offset_left = 56.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 31.0
+text = "Moedas: 0/0"
+
+[node name="VictoryPanel" type="Panel" parent="." unique_id=1390795438]
+visible = false
+offset_left = 368.0
+offset_top = 72.0
+offset_right = 808.0
+offset_bottom = 208.0
+
+[node name="VictoryLabel" type="Label" parent="VictoryPanel" unique_id=403041963]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 432.0
+offset_bottom = 137.0
+text = "VITÓRIA!"
+label_settings = SubResource("LabelSettings_37p78")
+
+[node name="RestartButton" type="Button" parent="VictoryPanel" unique_id=259224388]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 48.0
+offset_right = 612.0
+offset_bottom = 79.0
+text = "Reiniciar"
