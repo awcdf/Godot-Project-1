@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ufdqsm1kwpkj"]
+
+[ext_resource type="Script" uid="uid://c5kjwo0n34gtt" path="res://scripts/inimigo.gd" id="1_61lki"]
+[ext_resource type="Texture2D" uid="uid://b8p5ynqfceteh" path="res://assets/sprits/icon.svg" id="1_pt50e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pt50e"]
+size = Vector2(8, 8)
+
+[node name="inimigo" type="Area2D" unique_id=254409819]
+modulate = Color(0.91879135, 0.0004199408, 0.02987957, 1)
+script = ExtResource("1_61lki")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622991924]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.054687496, 0.054687496)
+texture = ExtResource("1_pt50e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=116614601]
+shape = SubResource("RectangleShape2D_pt50e")
+
+[node name="PointA" type="Marker2D" parent="." unique_id=2134322608]
+position = Vector2(-8, 0)
+
+[node name="PointB" type="Marker2D" parent="." unique_id=1695703960]
+position = Vector2(8, 0)

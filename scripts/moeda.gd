@@ -7,5 +7,7 @@ func _ready():
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		Global.add_coin(1)
+		Global.play_coin_sfx()
 		queue_free()
 	
+"res://assets/sprits/icon.svg"

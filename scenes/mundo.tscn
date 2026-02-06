@@ -1,14 +1,32 @@
 [gd_scene format=3 uid="uid://de0braunitiv7"]
 
-[ext_resource type="PackedScene" uid="uid://cfb37rm5ppqac" path="res://jogador.tscn" id="1_lgngo"]
-[ext_resource type="PackedScene" uid="uid://cma6ep846flkf" path="res://chao.tscn" id="2_fw4w5"]
-[ext_resource type="PackedScene" uid="uid://db64a18ypvyu7" path="res://obstaculo.tscn" id="3_fw4w5"]
-[ext_resource type="PackedScene" uid="uid://blgf8kmni2auh" path="res://zona_morte.tscn" id="4_otwa2"]
-[ext_resource type="PackedScene" uid="uid://cwo3wqoeqx6ue" path="res://moeda.tscn" id="5_aou4a"]
-[ext_resource type="PackedScene" uid="uid://dpwcjhqad06du" path="res://hud.tscn" id="6_5ckkb"]
+[ext_resource type="PackedScene" uid="uid://cfb37rm5ppqac" path="res://scenes/jogador.tscn" id="1_lgngo"]
+[ext_resource type="PackedScene" uid="uid://cma6ep846flkf" path="res://scenes/chao.tscn" id="2_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://db64a18ypvyu7" path="res://scenes/obstaculo.tscn" id="3_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://blgf8kmni2auh" path="res://scenes/zona_morte.tscn" id="4_otwa2"]
+[ext_resource type="PackedScene" uid="uid://cwo3wqoeqx6ue" path="res://scenes/moeda.tscn" id="5_aou4a"]
+[ext_resource type="PackedScene" uid="uid://dpwcjhqad06du" path="res://scenes/hud.tscn" id="6_5ckkb"]
+[ext_resource type="PackedScene" uid="uid://d4g3giegakmu8" path="res://scenes/spawn_point.tscn" id="7_75jji"]
+[ext_resource type="PackedScene" uid="uid://ufdqsm1kwpkj" path="res://scenes/inimigo.tscn" id="8_kxyy5"]
 
 [node name="Mundo" type="Node2D" unique_id=695195210]
 position = Vector2(-1, -5)
+
+[node name="inimigo" parent="." unique_id=254409819 instance=ExtResource("8_kxyy5")]
+position = Vector2(252, 557)
+scale = Vector2(4.48, 3.8)
+
+[node name="inimigo2" parent="." unique_id=950708346 instance=ExtResource("8_kxyy5")]
+position = Vector2(448, 559)
+scale = Vector2(4.48, 3.8)
+
+[node name="inimigo3" parent="." unique_id=2067212210 instance=ExtResource("8_kxyy5")]
+position = Vector2(639, 557)
+scale = Vector2(4.48, 3.8)
+
+[node name="inimigo4" parent="." unique_id=143159648 instance=ExtResource("8_kxyy5")]
+position = Vector2(700.99994, 390)
+scale = Vector2(4.48, 3.8)
 
 [node name="Jogador" parent="." unique_id=638146725 groups=["player"] instance=ExtResource("1_lgngo")]
 position = Vector2(377, 69)
@@ -59,3 +77,7 @@ position = Vector2(705, 317)
 position = Vector2(1089, 253)
 
 [node name="Hud" parent="." unique_id=1249565899 instance=ExtResource("6_5ckkb")]
+
+[node name="SpawnPoint" parent="." unique_id=295137826 instance=ExtResource("7_75jji")]
+position = Vector2(79, 561.00006)
+scale = Vector2(4.48, 3.8)

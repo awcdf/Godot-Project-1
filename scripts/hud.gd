@@ -22,6 +22,7 @@ func _on_coins_changed(_total: int) -> void:
 	coin_label.text = "Moedas: %d/%d" % [Global.coins, Global.total_coins]
 
 func _on_victory() -> void:
+	Global.play_victory_sfx()
 	victory_panel.visible = true
 	get_tree().paused = true
 

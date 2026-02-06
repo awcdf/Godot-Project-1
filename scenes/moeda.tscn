@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwo3wqoeqx6ue"]
 
-[ext_resource type="Texture2D" uid="uid://b8p5ynqfceteh" path="res://icon.svg" id="1_7xn1b"]
-[ext_resource type="Script" uid="uid://cnlhnf6abvkm0" path="res://moeda.gd" id="1_jvmwt"]
+[ext_resource type="Texture2D" uid="uid://b8p5ynqfceteh" path="res://assets/sprits/icon.svg" id="1_7xn1b"]
+[ext_resource type="Script" uid="uid://ddsv5ynig1gjc" path="res://scripts/moeda.gd" id="1_jvmwt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvmwt"]
 radius = 40.792156
