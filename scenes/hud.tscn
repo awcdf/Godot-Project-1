@@ -2,9 +2,36 @@
 
 [ext_resource type="Script" uid="uid://1tvv1bqki2gy" path="res://scripts/hud.gd" id="1_37p78"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_37p78"]
-font_size = 100
-font_color = Color(1, 0.38431373, 0.03529412, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_overlay"]
+bg_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+bg_color = Color(0.1, 0.1, 0.12, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.95, 0.65, 0.2, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_left = 12
+corner_radius_bottom_right = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 48
+font_color = Color(1, 0.85, 0.55, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_message"]
+font_size = 24
+font_color = Color(0.9, 0.9, 0.9, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_stat_label"]
+font_size = 18
+font_color = Color(0.75, 0.75, 0.78, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_stat_value"]
+font_size = 20
+font_color = Color(0.98, 0.98, 0.98, 1)
 
 [node name="Hud" type="CanvasLayer" unique_id=1249565899]
 script = ExtResource("1_37p78")
@@ -18,23 +45,122 @@ text = "Moedas: 0/0"
 
 [node name="VictoryPanel" type="Panel" parent="." unique_id=1390795438]
 visible = false
-offset_left = 368.0
-offset_top = 72.0
-offset_right = 808.0
-offset_bottom = 208.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_overlay")
 
-[node name="VictoryLabel" type="Label" parent="VictoryPanel" unique_id=403041963]
-layout_mode = 0
-offset_left = 16.0
-offset_right = 432.0
-offset_bottom = 137.0
-text = "VITÓRIA!"
-label_settings = SubResource("LabelSettings_37p78")
+[node name="Card" type="Panel" parent="VictoryPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -220.0
+offset_right = 340.0
+offset_bottom = 220.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="RestartButton" type="Button" parent="VictoryPanel" unique_id=259224388]
-layout_mode = 0
-offset_left = 536.0
-offset_top = 48.0
-offset_right = 612.0
-offset_bottom = 79.0
+[node name="TitleLabel" type="Label" parent="VictoryPanel/Card"]
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = 60.0
+text = "Vitória!"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="VictoryPanel/Card"]
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 24.0
+offset_top = 70.0
+offset_right = -24.0
+offset_bottom = 100.0
+text = "Novo recorde!"
+label_settings = SubResource("LabelSettings_message")
+horizontal_alignment = 1
+
+[node name="StatsGrid" type="GridContainer" parent="VictoryPanel/Card"]
+columns = 2
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 24.0
+offset_top = 110.0
+offset_right = -24.0
+offset_bottom = 300.0
+
+[node name="CurrentTimeLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Tempo Atual"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="CurrentTimeValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "00:00.000"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="BestTimeLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Melhor Tempo"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="BestTimeValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "--:--.---"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="RunDeathsLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Mortes na Run"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="RunDeathsValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "0"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="TotalDeathsLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Total de Mortes"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="TotalDeathsValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "0"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="CoinsLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Moedas"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="CoinsValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "0/0"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="ChestsLabel" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "Baus"
+label_settings = SubResource("LabelSettings_stat_label")
+
+[node name="ChestsValue" type="Label" parent="VictoryPanel/Card/StatsGrid"]
+text = "0/0"
+label_settings = SubResource("LabelSettings_stat_value")
+horizontal_alignment = 2
+
+[node name="Buttons" type="HBoxContainer" parent="VictoryPanel/Card"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -70.0
+offset_right = 170.0
+offset_bottom = -20.0
+alignment = 1
+theme_override_constants/separation = 16
+
+[node name="RestartButton" type="Button" parent="VictoryPanel/Card/Buttons"]
+size_flags_horizontal = 3
 text = "Reiniciar"
+
+[node name="MenuButton" type="Button" parent="VictoryPanel/Card/Buttons"]
+size_flags_horizontal = 3
+text = "Menu"

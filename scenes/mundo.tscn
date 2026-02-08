@@ -2,82 +2,75 @@
 
 [ext_resource type="PackedScene" uid="uid://cfb37rm5ppqac" path="res://scenes/jogador.tscn" id="1_lgngo"]
 [ext_resource type="PackedScene" uid="uid://cma6ep846flkf" path="res://scenes/chao.tscn" id="2_fw4w5"]
-[ext_resource type="PackedScene" uid="uid://db64a18ypvyu7" path="res://scenes/obstaculo.tscn" id="3_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://blgf8kmni2auh" path="res://scenes/zona_morte.tscn" id="4_otwa2"]
 [ext_resource type="PackedScene" uid="uid://cwo3wqoeqx6ue" path="res://scenes/moeda.tscn" id="5_aou4a"]
 [ext_resource type="PackedScene" uid="uid://dpwcjhqad06du" path="res://scenes/hud.tscn" id="6_5ckkb"]
 [ext_resource type="PackedScene" uid="uid://d4g3giegakmu8" path="res://scenes/spawn_point.tscn" id="7_75jji"]
 [ext_resource type="PackedScene" uid="uid://ufdqsm1kwpkj" path="res://scenes/inimigo.tscn" id="8_kxyy5"]
+[ext_resource type="PackedScene" uid="uid://bwv6h2eoj0mrv" path="res://scenes/mapa_01.tscn" id="10_06eai"]
+[ext_resource type="PackedScene" uid="uid://cyksleuq13t64" path="res://scenes/barreira.tscn" id="10_wd5o3"]
+[ext_resource type="PackedScene" uid="uid://imt7vaxd6n07" path="res://scenes/bau.tscn" id="11_06eai"]
 
 [node name="Mundo" type="Node2D" unique_id=695195210]
-position = Vector2(-1, -5)
+position = Vector2(576, 328)
+
+[node name="mapa_01" parent="." unique_id=1039843556 instance=ExtResource("10_06eai")]
+scroll_offset = Vector2(392, -144)
+
+[node name="Bau" parent="." unique_id=1661767526 instance=ExtResource("11_06eai")]
+position = Vector2(768, 212)
+scale = Vector2(0.3102592, 0.33661577)
 
 [node name="inimigo" parent="." unique_id=254409819 instance=ExtResource("8_kxyy5")]
-position = Vector2(252, 557)
+position = Vector2(-2768, -888)
 scale = Vector2(4.48, 3.8)
 
 [node name="inimigo2" parent="." unique_id=950708346 instance=ExtResource("8_kxyy5")]
-position = Vector2(448, 559)
+position = Vector2(-2848, -943)
 scale = Vector2(4.48, 3.8)
 
 [node name="inimigo3" parent="." unique_id=2067212210 instance=ExtResource("8_kxyy5")]
-position = Vector2(639, 557)
+position = Vector2(-2657, -945)
 scale = Vector2(4.48, 3.8)
 
 [node name="inimigo4" parent="." unique_id=143159648 instance=ExtResource("8_kxyy5")]
-position = Vector2(700.99994, 390)
+position = Vector2(-2484, -1040)
 scale = Vector2(4.48, 3.8)
 
 [node name="Jogador" parent="." unique_id=638146725 groups=["player"] instance=ExtResource("1_lgngo")]
-position = Vector2(377, 69)
+position = Vector2(32, -128)
 
 [node name="Chao" parent="." unique_id=10278747 instance=ExtResource("2_fw4w5")]
-position = Vector2(577, 573)
+position = Vector2(496.00006, 256)
+scale = Vector2(2.3690276, 2.4771776)
 
-[node name="Obstaculo" parent="." unique_id=1022441173 instance=ExtResource("3_fw4w5")]
-position = Vector2(161, 549)
+[node name="Chao2" parent="." unique_id=510877545 instance=ExtResource("2_fw4w5")]
+position = Vector2(2264, 256)
+scale = Vector2(2.963021, 2.4771776)
 
-[node name="Obstaculo2" parent="." unique_id=557394610 instance=ExtResource("3_fw4w5")]
-position = Vector2(353, 549)
-
-[node name="Obstaculo3" parent="." unique_id=1581134240 instance=ExtResource("3_fw4w5")]
-position = Vector2(545, 549)
-
-[node name="Obstaculo4" parent="." unique_id=1766693794 instance=ExtResource("3_fw4w5")]
-position = Vector2(737, 549)
-
-[node name="Obstaculo5" parent="." unique_id=1194127067 instance=ExtResource("3_fw4w5")]
-position = Vector2(801, 501)
-
-[node name="Obstaculo6" parent="." unique_id=127412356 instance=ExtResource("3_fw4w5")]
-position = Vector2(865, 453)
-
-[node name="Obstaculo7" parent="." unique_id=1587636493 instance=ExtResource("3_fw4w5")]
-position = Vector2(929, 405)
-
-[node name="Obstaculo8" parent="." unique_id=233398450 instance=ExtResource("3_fw4w5")]
-position = Vector2(993, 357)
+[node name="Chao3" parent="." unique_id=1653298438 instance=ExtResource("2_fw4w5")]
+position = Vector2(4535.9995, 253)
+scale = Vector2(2.4879386, 2.4771776)
 
 [node name="ZonaMorte" parent="." unique_id=2073958590 instance=ExtResource("4_otwa2")]
-position = Vector2(609, 653)
+position = Vector2(2304, 376)
+scale = Vector2(10.415523, 3.3886728)
 
 [node name="Moeda" parent="." unique_id=715636323 instance=ExtResource("5_aou4a")]
-position = Vector2(257, 453)
-
-[node name="Moeda2" parent="." unique_id=1839752824 instance=ExtResource("5_aou4a")]
-position = Vector2(449, 453)
-
-[node name="Moeda3" parent="." unique_id=1527055777 instance=ExtResource("5_aou4a")]
-position = Vector2(641, 453)
-
-[node name="Moeda4" parent="." unique_id=1734903305 instance=ExtResource("5_aou4a")]
-position = Vector2(705, 317)
-
-[node name="Moeda5" parent="." unique_id=1393854012 instance=ExtResource("5_aou4a")]
-position = Vector2(1089, 253)
+position = Vector2(4472, 104.00001)
+scale = Vector2(0.2985291, 0.26307487)
 
 [node name="Hud" parent="." unique_id=1249565899 instance=ExtResource("6_5ckkb")]
 
 [node name="SpawnPoint" parent="." unique_id=295137826 instance=ExtResource("7_75jji")]
-position = Vector2(79, 561.00006)
+position = Vector2(48, 160)
 scale = Vector2(4.48, 3.8)
+
+[node name="Barreira" parent="." unique_id=372284691 instance=ExtResource("10_wd5o3")]
+position = Vector2(0, 48)
+
+[node name="Barreira2" parent="." unique_id=810832623 instance=ExtResource("10_wd5o3")]
+position = Vector2(4576, 64)
+
+[node name="Barreira3" parent="." unique_id=337835150 instance=ExtResource("10_wd5o3")]
+position = Vector2(5160, 72)

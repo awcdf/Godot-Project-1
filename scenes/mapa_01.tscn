@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bwv6h2eoj0mrv"]
+
+[ext_resource type="Texture2D" uid="uid://b6nyod871phrd" path="res://assets/backgrounds/Floresta_insolarada/mapa_01.png" id="1_r42vq"]
+[ext_resource type="Texture2D" uid="uid://cfqpbipcwhdcd" path="res://assets/backgrounds/Floresta_insolarada/mapa_02.png" id="2_u6l5q"]
+[ext_resource type="Texture2D" uid="uid://cp31w7mj1njke" path="res://assets/backgrounds/Floresta_insolarada/mapa_03.png" id="3_pjlke"]
+[ext_resource type="Texture2D" uid="uid://k06wj0j4aj2a" path="res://assets/backgrounds/Floresta_insolarada/sprits/nuvens.png" id="4_yvk0k"]
+[ext_resource type="Texture2D" uid="uid://d2cup80ifc2n4" path="res://assets/backgrounds/Floresta_insolarada/sprits/sol.png" id="5_lfdmj"]
+
+[node name="mapa_01" type="Parallax2D" unique_id=1039843556]
+
+[node name="mp1" type="Sprite2D" parent="." unique_id=564569628]
+position = Vector2(-1.5258789e-05, 0)
+scale = Vector2(1.4470898, 1.424479)
+texture = ExtResource("1_r42vq")
+
+[node name="mp2" type="Sprite2D" parent="." unique_id=1316600459]
+position = Vector2(1927, 1)
+scale = Vector2(1.4218748, 1.4218751)
+texture = ExtResource("2_u6l5q")
+
+[node name="mp3" type="Sprite2D" parent="." unique_id=1231024444]
+position = Vector2(3828.375, 1.5000204)
+scale = Vector2(1.420573, 1.420573)
+texture = ExtResource("3_pjlke")
+
+[node name="nuvens" type="Sprite2D" parent="." unique_id=2121713902]
+position = Vector2(-520, -296)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens2" type="Sprite2D" parent="." unique_id=800538706]
+position = Vector2(104, -320)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens3" type="Sprite2D" parent="." unique_id=1970784597]
+position = Vector2(784, -336)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens4" type="Sprite2D" parent="." unique_id=304290099]
+position = Vector2(1384, -352)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens5" type="Sprite2D" parent="." unique_id=1132076693]
+position = Vector2(4392, -304)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens6" type="Sprite2D" parent="." unique_id=62071749]
+position = Vector2(3832, -288)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens7" type="Sprite2D" parent="." unique_id=904759065]
+position = Vector2(3272, -288)
+texture = ExtResource("4_yvk0k")
+
+[node name="nuvens8" type="Sprite2D" parent="." unique_id=1177437812]
+position = Vector2(2720, -280)
+texture = ExtResource("4_yvk0k")
+
+[node name="Sol" type="Sprite2D" parent="." unique_id=1142800170]
+position = Vector2(2080, -352)
+scale = Vector2(1.3441736, 1.3441736)
+texture = ExtResource("5_lfdmj")

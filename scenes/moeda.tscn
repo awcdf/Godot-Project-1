@@ -1,18 +1,38 @@
 [gd_scene format=3 uid="uid://cwo3wqoeqx6ue"]
 
-[ext_resource type="Texture2D" uid="uid://b8p5ynqfceteh" path="res://assets/sprits/icon.svg" id="1_7xn1b"]
+[ext_resource type="Texture2D" uid="uid://djttgnt2fb8x7" path="res://assets/sprits/coin_front.png" id="1_4m6u1"]
 [ext_resource type="Script" uid="uid://ddsv5ynig1gjc" path="res://scripts/moeda.gd" id="1_jvmwt"]
+[ext_resource type="Texture2D" uid="uid://dhnghonbnsr5q" path="res://assets/sprits/coin_side.png" id="2_5f3s1"]
+[ext_resource type="Texture2D" uid="uid://dwgircr8124v8" path="res://assets/sprits/coin_back.png" id="3_1k2a9"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_coin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4m6u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5f3s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1k2a9")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 6.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvmwt"]
 radius = 40.792156
 
 [node name="Moeda" type="Area2D" unique_id=715636323]
-modulate = Color(0.10535284, 0.9714883, 7.70092e-07, 1)
 script = ExtResource("1_jvmwt")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051446837]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1051446837]
+position = Vector2(2.0000002, -3)
 scale = Vector2(0.4375, 0.40625003)
-texture = ExtResource("1_7xn1b")
+sprite_frames = SubResource("SpriteFrames_coin")
+animation = &"spin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126528477]
 shape = SubResource("CircleShape2D_jvmwt")

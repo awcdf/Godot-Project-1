@@ -1,22 +1,75 @@
 [gd_scene format=3 uid="uid://cfb37rm5ppqac"]
 
 [ext_resource type="Script" uid="uid://db8ttue5vlpov" path="res://scripts/jogador.gd" id="1_c2wt1"]
-[ext_resource type="Texture2D" uid="uid://b8p5ynqfceteh" path="res://assets/sprits/icon.svg" id="2_q2130"]
+[ext_resource type="Texture2D" uid="uid://bxpuki3lf0t7" path="res://assets/characters/guerreiro/original/guerreiro_idle.png" id="2_uahlj"]
+[ext_resource type="Texture2D" uid="uid://ci7p440aboii8" path="res://assets/characters/guerreiro/sprites/jump_01.png" id="3_lj65x"]
+[ext_resource type="Texture2D" uid="uid://d4fbokujnapyt" path="res://assets/characters/guerreiro/sprites/run_01.png" id="3_qcln2"]
+[ext_resource type="Texture2D" uid="uid://b5outur7i4ef3" path="res://assets/characters/guerreiro/sprites/jump_02.png" id="4_a7p4t"]
+[ext_resource type="Texture2D" uid="uid://brd2uvkngd2js" path="res://assets/characters/guerreiro/sprites/run_02.png" id="4_s760d"]
+[ext_resource type="Texture2D" uid="uid://bg2oj376tqhno" path="res://assets/characters/guerreiro/sprites/jump_03.png" id="5_8gwte"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32758"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uahlj")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8gwte")
+}],
+"loop": true,
+"name": &"jump_fall",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a7p4t")
+}],
+"loop": true,
+"name": &"jump_mid",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lj65x")
+}],
+"loop": true,
+"name": &"jump_start",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qcln2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s760d")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4obgb"]
-size = Vector2(70, 61.4375)
+size = Vector2(35, 69)
 
 [node name="Jogador" type="CharacterBody2D" unique_id=638146725]
-position = Vector2(32, 25)
+position = Vector2(32, -114)
 script = ExtResource("1_c2wt1")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1384714612]
-position = Vector2(-32, -26.5)
-scale = Vector2(0.515625, 0.47656253)
-texture = ExtResource("2_q2130")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1656738489]
+position = Vector2(-32, -25)
+scale = Vector2(0.2244732, 0.21806994)
+sprite_frames = SubResource("SpriteFrames_32758")
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=817809679]
-position = Vector2(-32, -26.71875)
+position = Vector2(-32.5, -23.5)
 shape = SubResource("RectangleShape2D_4obgb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1721704296]
+position = Vector2(-32, -25)

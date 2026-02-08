@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://c0m8g1nal2b1u"]
+
+[ext_resource type="Script" uid="uid://d7b6q0h8s2n3p" path="res://scripts/menu.gd" id="1_2n8y4"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+script = ExtResource("1_2n8y4")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 3
+anchors_preset = 15
+color = Color(0.05, 0.06, 0.08, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -200.0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 20.0
+text = "PRIMEIRO JOGO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 60.0
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="PlayButton" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Jogar"
+
+[node name="OptionsButton" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Opcoes"
+
+[node name="QuitButton" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Sair"
+
+[node name="OptionsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -120.0
+offset_right = 180.0
+offset_bottom = 120.0
+visible = false
+
+[node name="OptionsMain" type="VBoxContainer" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="OptionsTitle" type="Label" parent="OptionsPanel/OptionsMain"]
+layout_mode = 2
+text = "Opcoes"
+horizontal_alignment = 1
+
+[node name="AudioButton" type="Button" parent="OptionsPanel/OptionsMain"]
+layout_mode = 2
+text = "Audio"
+
+[node name="VideoButton" type="Button" parent="OptionsPanel/OptionsMain"]
+layout_mode = 2
+text = "Video"
+
+[node name="LanguageButton" type="Button" parent="OptionsPanel/OptionsMain"]
+layout_mode = 2
+text = "Idioma"
+
+[node name="BackButton" type="Button" parent="OptionsPanel/OptionsMain"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="AudioPanel" type="Panel" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+visible = false
+
+[node name="AudioVBox" type="VBoxContainer" parent="OptionsPanel/AudioPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="AudioTitle" type="Label" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="MasterLabel" type="Label" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+text = "Volume Geral"
+
+[node name="MasterSlider" type="HSlider" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="BgmLabel" type="Label" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+text = "Musica"
+
+[node name="BgmSlider" type="HSlider" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SfxLabel" type="Label" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+text = "Efeitos"
+
+[node name="SfxSlider" type="HSlider" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+min_value = 0.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="AudioBackButton" type="Button" parent="OptionsPanel/AudioPanel/AudioVBox"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="VideoPanel" type="Panel" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+visible = false
+
+[node name="VideoVBox" type="VBoxContainer" parent="OptionsPanel/VideoPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="VideoTitle" type="Label" parent="OptionsPanel/VideoPanel/VideoVBox"]
+layout_mode = 2
+text = "Video"
+horizontal_alignment = 1
+
+[node name="VideoHint" type="Label" parent="OptionsPanel/VideoPanel/VideoVBox"]
+layout_mode = 2
+text = "Em breve"
+horizontal_alignment = 1
+
+[node name="VideoBackButton" type="Button" parent="OptionsPanel/VideoPanel/VideoVBox"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="LanguagePanel" type="Panel" parent="OptionsPanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+visible = false
+
+[node name="LanguageVBox" type="VBoxContainer" parent="OptionsPanel/LanguagePanel"]
+layout_mode = 1
+anchors_preset = 15
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="LanguageTitle" type="Label" parent="OptionsPanel/LanguagePanel/LanguageVBox"]
+layout_mode = 2
+text = "Idioma"
+horizontal_alignment = 1
+
+[node name="LanguageHint" type="Label" parent="OptionsPanel/LanguagePanel/LanguageVBox"]
+layout_mode = 2
+text = "Em breve"
+horizontal_alignment = 1
+
+[node name="LanguageBackButton" type="Button" parent="OptionsPanel/LanguagePanel/LanguageVBox"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="Hint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+offset_left = -200.0
+offset_top = -10.0
+offset_right = 200.0
+offset_bottom = 10.0
+text = "Pressione Enter para jogar"
+horizontal_alignment = 1
+vertical_alignment = 1

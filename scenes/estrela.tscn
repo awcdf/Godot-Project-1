@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c2starc0d3q1"]
+
+[ext_resource type="Texture2D" uid="uid://bwi42vwcqe686" path="res://assets/sprits/estrelha_01.png" id="1_star_01"]
+[ext_resource type="Texture2D" uid="uid://cufv47wyvl2a0" path="res://assets/sprits/estrelha_02.png" id="2_star_02"]
+[ext_resource type="Script" uid="uid://crsm4iuyb21cx" path="res://scripts/estrela.gd" id="3_star_script"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_star_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_star_02")
+}],
+"loop": true,
+"name": &"shine",
+"speed": 6.0
+}]
+
+[node name="Estrela" type="AnimatedSprite2D" unique_id=1361922859]
+scale = Vector2(0.13550122, 0.13550122)
+sprite_frames = SubResource("SpriteFrames_1")
+animation = &"shine"
+script = ExtResource("3_star_script")

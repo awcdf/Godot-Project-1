@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bikgctxasridf"]
+
+[ext_resource type="Texture2D" uid="uid://b6nyod871phrd" path="res://assets/backgrounds/Floresta_insolarada/mapa_01.png" id="1_2brmc"]
+[ext_resource type="Texture2D" uid="uid://cfqpbipcwhdcd" path="res://assets/backgrounds/Floresta_insolarada/mapa_02.png" id="2_h68y1"]
+
+[node name="Floresta_insolarada" type="ParallaxBackground" unique_id=697825894]
+
+[node name="mapa" type="ParallaxLayer" parent="." unique_id=964561854]
+position = Vector2(2736, 333)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="mapa" unique_id=1997386421]
+unique_name_in_owner = true
+position = Vector2(-364.50586, -26)
+scale = Vector2(1.1242476, 1.0833334)
+texture = ExtResource("1_2brmc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="mapa" unique_id=2063603291]
+unique_name_in_owner = true
+position = Vector2(2928.4998, -27.499945)
+scale = Vector2(1.1912203, 1.0872397)
+texture = ExtResource("2_h68y1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="mapa" unique_id=2000266023]
+unique_name_in_owner = true
+visible = false
+position = Vector2(3237.9998, -70.99997)
+scale = Vector2(0.9702383, 1.0833334)
